@@ -6,7 +6,7 @@ function loadPics() {
   imgChildren.each(function(i) {
     setTimeout( function() {
       imgChildren.eq(i).addClass("show-pic");
-    }, 100 + 200 * i);
+    }, 100 + 170 * i);
   });
 }
 

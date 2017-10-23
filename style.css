@@ -34,9 +34,6 @@ body {
 @keyframes showPic {
   0% {
     transform: translateX(-50px); }
-  90% {
-    opacity: 1;
-    transform: translateX(4px); }
   100% {
     transform: translateX(0);
     opacity: 1; } }
