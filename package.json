@@ -1,0 +1,22 @@
+{
+  "name": "gilportfolio",
+  "version": "1.0.0",
+  "description": "Gil Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NofGuttman/GilPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NofGuttman/GilPortfolio/issues"
+  },
+  "homepage": "https://github.com/NofGuttman/GilPortfolio#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
