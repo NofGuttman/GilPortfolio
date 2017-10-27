@@ -12,37 +12,57 @@ body {
   height: 14rem;
   color: white;
   font-size: 3rem;
-  background: url(https://media.giphy.com/media/6LCvNiac0J25G/giphy.gif) no-repeat top center;
+  background: url(https://media.giphy.com/media/GN4v1fE324ZZC/giphy.gif) no-repeat bottom center;
   background-size: cover; }
   .header span {
     margin: 0 2%; }
     .header span.space {
       margin: 0 3%; }
 
-.pics-zone {
-  display: none;
-  padding: 5px 0;
-  width: 75vw;
-  text-align: left;
-  min-width: 850px; }
-  .pics-zone.is-shown {
-    display: inline-block; }
-  .pics-zone img {
-    object-fit: cover;
-    width: 30%;
-    height: 200px;
-    border-radius: 4px;
-    margin: 5px;
-    opacity: 0;
-    transform-origin: left; }
-    .pics-zone img.show-pic {
-      animation: showPic 400ms ease-in-out forwards; }
-@keyframes showPic {
-  0% {
-    transform: translateX(-50px); }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
+.content-container {
+  display: flex;
+  padding: 10px 0; }
+  .content-container .side-bar {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    float: left; }
+    .content-container .side-bar li {
+      list-style: none;
+      height: 4rem;
+      width: 17rem;
+      line-height: 4rem;
+      text-transform: uppercase;
+      border-bottom: 1px grey solid;
+      cursor: pointer; }
+      .content-container .side-bar li:hover {
+        font-size: 200%;
+        transition: 100ms linear; }
+      .content-container .side-bar li.selected {
+        border: 1px solid grey; }
+  .content-container .image-container {
+    text-align: left;
+    display: block;
+    padding-left: 10px; }
+    .content-container .image-container .image-item {
+      width: 300px;
+      height: 200px;
+      display: inline-block;
+      border-radius: 3px;
+      margin: 5px;
+      overflow: hidden; }
+      .content-container .image-container .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .content-container .image-container .image-item .title {
+        position: absolute;
+        display: block;
+        transform: translateY(-20px); }
+
 .nav-bar {
   background: black;
   padding: 0;
@@ -59,40 +79,6 @@ body {
     transition: all 300ms ease-in-out; }
     .nav-bar li.selected {
       background: orangered; }
-
-.side-bar {
-  margin: 0;
-  margin-top: 20px;
-  margin-left: 2vw;
-  padding: 0;
-  width: 200px;
-  color: white;
-  diolioyhugsplay: inline-block;
-  vertical-align: top;
-  float: left; }
-  .side-bar li {
-    list-style: none;
-    padding: 10px 20px;
-    border-bottom: 1px grey solid;
-    cursor: pointer; }
-    .side-bar li:hover {
-      transform: scale(1.05);
-      transition: 100ms linear; }
-    .side-bar li.selected {
-      border: 1px solid grey; }
-
-.focused {
-  display: none;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #010101; }
-  .focused img {
-    position: relative;
-    width: 70vw;
-    top: 50vh;
-    transform: translateY(-50%); }
 
 footer {
   background: black;

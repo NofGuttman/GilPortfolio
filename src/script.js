@@ -19,30 +19,41 @@ loadPics();
 $(".category").click(function() {
   let $this = $(this),
       catNumber = $this.index(),
-      $pages = $(".pics-zone");
+      id = this.id;
   
-  console.log(catNumber);
-  $(".category").removeClass("selected");
-  $this.addClass("selected");
-  
-  $pages.removeClass("is-shown");
-  $pages[catNumber].className += " is-shown";
-  
-  loadPics();
+  if (!$this.hasClass("selected")) {
+    console.log(id);
+    $(".category").removeClass("selected");
+    $this.addClass("selected");
+    
+    $.ajax({
+      type: "POST",
+      url: "/" + id,
+      success: function(res) {
+        let categories = res["sideBar"].map(function(cat) {
+          return "<li>" + cat + "</li>";
+        });
+        $(".side-bar").html(categories);
+      } 
+    });
+  }
 });
 
-//$(".container").load('2d.html');
 
 $.ajax({
   type: "POST",
-  url: '/2d',
+  url: '/3d',
   success: function(res) {
-    let dude = res["backgrounds"].map(function(item) {
-      return "<h1>" + item["title"] + "</h1>";
-    })
-    console.log(dude);
+    let title = res["imgs"]["iacStudy"].map(function(item) {
+      return "<div class='image-item'><img src=" + item["image"] + "><div class='title'>" + item["title"] +"</div></></div>";
+    });
     
-    $(".container").html(dude);
+    let categories = res["sideBar"].map(function(cat) {
+      return "<li>" + cat + "</li>";
+    });
+    
+    $(".image-container").html(title);
+    $(".side-bar").html(categories);
   }
 });
 

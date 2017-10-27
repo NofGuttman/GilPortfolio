@@ -11,7 +11,11 @@ app.get('/', function(req, res) {
 
 app.post("/2d", function(req, res) {
   res.send(api["twoD"]);
-})
+});
+
+app.post("/3d", function(req, res) {
+  res.send(api["threeD"]);
+});
 
 app.listen(3000, function() {
   console.log("Server is running at PORT 3000");
