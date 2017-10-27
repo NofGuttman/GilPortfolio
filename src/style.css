@@ -4,15 +4,16 @@ body {
   font-family: Roboto, sans-serif;
   min-width: 1100px;
   text-align: center;
-  background-color: #131313; }
+  background-color: #101010; }
 
 .header {
   text-align: center;
-  line-height: 10rem;
-  height: 10rem;
+  line-height: 14rem;
+  height: 14rem;
   color: white;
   font-size: 3rem;
-  background: url(bones.jpg); }
+  background: url(https://media.giphy.com/media/6LCvNiac0J25G/giphy.gif) no-repeat top center;
+  background-size: cover; }
   .header span {
     margin: 0 2%; }
     .header span.space {
@@ -51,6 +52,7 @@ body {
     display: inline-block;
     border-radius: 3px;
     color: white;
+    width: 200px;
     padding: 5px 40px;
     font-size: 2rem;
     cursor: pointer;
@@ -65,7 +67,7 @@ body {
   padding: 0;
   width: 200px;
   color: white;
-  display: inline-block;
+  diolioyhugsplay: inline-block;
   vertical-align: top;
   float: left; }
   .side-bar li {
@@ -74,7 +76,10 @@ body {
     border-bottom: 1px grey solid;
     cursor: pointer; }
     .side-bar li:hover {
-      background: #222; }
+      transform: scale(1.05);
+      transition: 100ms linear; }
+    .side-bar li.selected {
+      border: 1px solid grey; }
 
 .focused {
   display: none;

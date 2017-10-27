@@ -31,17 +31,20 @@ $(".category").click(function() {
   loadPics();
 });
 
+//$(".container").load('2d.html');
+
 $.ajax({
   type: "POST",
-  url: "/2d",
-  success: function(response) {
-    console.log(response);
+  url: '/2d',
+  success: function(res) {
+    let dude = res["backgrounds"].map(function(item) {
+      return "<h1>" + item["title"] + "</h1>";
+    })
+    console.log(dude);
+    
+    $(".container").html(dude);
   }
 });
-
-
-
-
 
 
 
