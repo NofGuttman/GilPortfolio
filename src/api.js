@@ -1,6 +1,11 @@
 const images = {
   twoD: {
-    sideBar: ["Backgrounds", "Greetings", "Icons", "Logos", "Stickers"],
+    sideBar: [
+      {title: "Backgrounds", category: "backgrounds"},
+      {title: "Greetings", category: "greetings"},
+      {title: "Icons", category: "icons"},
+      {title: "Stickers", category: "stickers"}
+    ],
     imgs: {
       backgrounds: [
         {title: "Apple Shake", description: "This is the description", image: "photos/2D/Backgrounds/AppleShake.png"},
@@ -41,7 +46,10 @@ const images = {
     }
   },
   threeD: {
-    sideBar: ["After Hours", "IAC Study"],
+    sideBar: [
+      {title: "After Hours", category: "afterHours"},
+      {title: "IAC Study", category: "iacStudy"}
+    ],
     imgs: {
       afterHours: [
         {title: "Title", description: "This is the description", image: "photos/3D/AfterHoursProjects/BabyGroot.png"},
