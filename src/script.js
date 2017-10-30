@@ -1,11 +1,11 @@
-// Add "is-shown" class one by one.
+// Add "show" class one by one.
 
-function loadPics() {
-  let images = $(".image-container").children();
+function loadElements(list) {
+  let images = list;
   
   images.each(function(i) {
     setTimeout(function() {
-      images.eq(i).addClass("show-pic");
+      images.eq(i).addClass("show");
     }, 100 + 170 * i);
   });
 }
@@ -32,6 +32,8 @@ $(".category").click(function() {
         
         $(".side-bar").html(categories);
         $(".image-container").html("<div class='no-images-selected'>Select a Category</div>");
+        
+        loadElements($(".side-category"));
       } 
     });
   }
@@ -51,7 +53,7 @@ $(".side-bar").on('click', '.side-category', function() {
   
   $(".image-container").html(imgs);
   
-  loadPics();
+  loadElements($(".image-item"));
 });
 
 

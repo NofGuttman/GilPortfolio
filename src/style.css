@@ -31,6 +31,7 @@ body {
     vertical-align: top;
     float: left; }
     .content-container .side-bar li {
+      opacity: 0;
       list-style: none;
       height: 4rem;
       width: 17rem;
@@ -38,6 +39,15 @@ body {
       text-transform: uppercase;
       border-bottom: 1px grey solid;
       cursor: pointer; }
+      .content-container .side-bar li.show {
+        animation: showCategory 200ms linear forwards; }
+@keyframes showCategory {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg); }
+  100% {
+    opacity: 1;
+    transform: rotateX(0); } }
       .content-container .side-bar li:hover {
         font-size: 200%;
         transition: 100ms linear; }
@@ -56,7 +66,7 @@ body {
       border-radius: 3px;
       margin: 5px;
       overflow: hidden; }
-      .content-container .image-container .image-item.show-pic {
+      .content-container .image-container .image-item.show {
         animation: showPic 1s ease-in-out forwards; }
 @keyframes showPic {
   0% {

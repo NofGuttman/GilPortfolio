@@ -40,6 +40,7 @@ body {
     float: left;
 
     li {
+      opacity: 0;
       list-style: none;
       height: 4rem;
       width: 17rem;
@@ -47,6 +48,21 @@ body {
       text-transform: uppercase;
       border-bottom: 1px grey solid;
       cursor: pointer;
+      
+      &.show {
+        animation: showCategory 200ms linear forwards;
+      }
+      
+      @keyframes showCategory {
+        0% {
+          opacity: 0;
+          transform: rotateX(-90deg)
+        }
+        100% {
+          opacity: 1;
+          transform: rotateX(0);
+        }
+      }
 
       &:hover {
         font-size: 200%;
@@ -74,7 +90,7 @@ body {
       margin: 5px;
       overflow: hidden;
       
-      &.show-pic {
+      &.show {
         animation: showPic 1s ease-in-out forwards;
       }
       
