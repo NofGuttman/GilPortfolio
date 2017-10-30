@@ -1,18 +1,14 @@
 // Add "is-shown" class one by one.
 
 function loadPics() {
-  let imgChildren = $(".is-shown").children();
+  let images = $(".image-container").children();
   
-  imgChildren.removeClass("show-pic");
-
-  imgChildren.each(function(i) {
-    setTimeout( function() {
-      imgChildren.eq(i).addClass("show-pic");
+  images.each(function(i) {
+    setTimeout(function() {
+      images.eq(i).addClass("show-pic");
     }, 100 + 170 * i);
   });
 }
-
-loadPics();
 
 // Changes selected main category and load side-categories.
 
@@ -54,6 +50,8 @@ $(".side-bar").on('click', '.side-category', function() {
   $this.addClass("selected");
   
   $(".image-container").html(imgs);
+  
+  loadPics();
 });
 
 
