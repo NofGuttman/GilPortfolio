@@ -1,12 +1,12 @@
 // Add "show" class one by one.
 
-function loadElements(list) {
+function loadElements(list, speed = 150) {
   let images = list;
   
   images.each(function(i) {
     setTimeout(function() {
       images.eq(i).addClass("show");
-    }, 100 + 170 * i);
+    }, 100 + speed * i);
   });
 }
 
@@ -33,7 +33,7 @@ $(".category").click(function() {
         $(".side-bar").html(categories);
         $(".image-container").html("<div class='no-images-selected'>Select a Category</div>");
         
-        loadElements($(".side-category"));
+        loadElements($(".side-category"), 100);
       } 
     });
   }
@@ -47,13 +47,18 @@ $(".side-bar").on('click', '.side-category', function() {
       imgs = page.imgs[category].map(function(item) {
         return "<div class='image-item'><img src=" + item["image"] + "><div class='title'>" + item["title"] +"</div></></div>";
       });
+  
+  if($this.hasClass("selected")) {
+    return;
+  }
+  
   $(".side-category").removeClass("selected");
   
   $this.addClass("selected");
   
   $(".image-container").html(imgs);
   
-  loadElements($(".image-item"));
+  loadElements($(".image-item"), 150);
 });
 
 
@@ -74,6 +79,8 @@ $.ajax({
     
     $(".image-container").html("<div class='no-images-selected'>Select a Category</div>");
     $(".side-bar").html(categories);
+    
+    loadElements($(".side-category"), 100);
     
   }
 });
