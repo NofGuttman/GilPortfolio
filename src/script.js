@@ -87,7 +87,6 @@ function showNthImage(n) {
   } else {
     numOfSelectedImage = n;
   }
-  console.log(numOfSelectedImage)
   let $selectedElement = $(".image-item img").toArray()[numOfSelectedImage].cloneNode();
   $(".black-screen-image").html($selectedElement);
 }
@@ -96,8 +95,17 @@ function showNthImage(n) {
 //Press ESC to close the black screen div
 
 $(document).on('keydown', function(e) {
-  if(e.keyCode == 27) {
-    $(".black-screen").css({"display": "none"});
+  switch(e.keyCode) {
+    case 27:
+      $(".black-screen").css({"display": "none"});
+      break;
+    case 37:
+      showNthImage(numOfSelectedImage - 1);
+      break;
+    case 39:
+      showNthImage(numOfSelectedImage + 1);
+    default:
+      break;
   }
 });
 
