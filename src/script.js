@@ -1,3 +1,6 @@
+var lengthOfImages = 0,
+    numOfSelectedImage = 0;
+
 // Add "show" class one by one.
 
 function loadElements(list, speed = 150) {
@@ -62,8 +65,45 @@ $(".side-bar").on('click', '.side-category', function() {
 });
 
 
+//Click on image to open the black screen
 
-//default start page
+$(".image-container").on('click', '.image-item', function() {
+  let $this = $(this),
+      numOfSelectedImage = $this.index(),
+      thisImage = $this.children("img").clone();
+  showNthImage(numOfSelectedImage);
+  $(".black-screen").css({"display": "block"});
+});
+
+
+//Show nth image
+
+function showNthImage(n) {
+  let lenghtOfImages = $(".image-item").length;
+  if(n < 0) {
+    numOfSelectedImage = lenghtOfImages - 1;
+  } else if(n > lenghtOfImages - 1) {
+    numOfSelectedImage = 0;
+  } else {
+    numOfSelectedImage = n;
+  }
+  console.log(numOfSelectedImage)
+  let $selectedElement = $(".image-item img").toArray()[numOfSelectedImage].cloneNode();
+  $(".black-screen-image").html($selectedElement);
+}
+
+
+//Press ESC to close the black screen div
+
+$(document).on('keydown', function(e) {
+  if(e.keyCode == 27) {
+    $(".black-screen").css({"display": "none"});
+  }
+});
+
+
+
+//Default start page
 
 var page = {};
 
