@@ -69,7 +69,8 @@ body {
       margin: 5px;
       overflow: hidden;
       text-align: center;
-      line-height: 200px; }
+      line-height: 200px;
+      cursor: pointer; }
       .content-container .image-container .image-item.show {
         animation: showPic 1s ease-in-out forwards; }
 @keyframes showPic {
@@ -118,7 +119,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: black;
   animation: showBlackScreen 200ms ease-in-out forwards; }
 @keyframes showBlackScreen {
   0% {
@@ -132,6 +133,19 @@ body {
     .black-screen .black-screen-image img {
       max-width: 70vw;
       max-height: 90vh; }
+  .black-screen .exit-button {
+    display: inline-block;
+    right: 0;
+    top: 0;
+    font-size: 5rem;
+    margin: 0 30px;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+    transition: 150ms ease-in-out; }
+    .black-screen .exit-button:hover {
+      transform: scale(1.2); }
   .black-screen .black-screen-arrow {
     position: absolute;
     display: inline-block;

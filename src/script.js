@@ -92,12 +92,12 @@ function showNthImage(n) {
 }
 
 
-//Press ESC to close the black screen div
+//Press ESC to close the black screen div and Arrow Keys to toggle left and right
 
 $(document).on('keydown', function(e) {
   switch(e.keyCode) {
     case 27:
-      $(".black-screen").css({"display": "none"});
+      hideBlackScreen();
       break;
     case 37:
       showNthImage(numOfSelectedImage - 1);
@@ -109,6 +109,12 @@ $(document).on('keydown', function(e) {
   }
 });
 
+
+//Hide black screen
+
+function hideBlackScreen() {
+  $(".black-screen").css({"display": "none"});
+}
 
 
 //Default start page
