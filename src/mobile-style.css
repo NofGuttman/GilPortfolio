@@ -1,0 +1,20 @@
+@media screen and (max-width: 920px) {
+  .nav-bar li {
+    padding: 0;
+    width: 32%; }
+
+  .content-container {
+    flex-direction: column; }
+    .content-container .side-bar {
+      display: block; }
+      .content-container .side-bar li {
+        width: 100%; }
+        .content-container .side-bar li.selected {
+          background: #252525; }
+    .content-container .image-container {
+      text-align: center;
+      padding: 0; }
+      .content-container .image-container .image-item {
+        width: 46%; } }
+
+/*# sourceMappingURL=mobile-style.css.map */

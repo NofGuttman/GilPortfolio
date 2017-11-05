@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  min-width: 1100px;
   text-align: center;
   background-color: #101010; }
 
@@ -13,7 +12,8 @@ body {
   color: white;
   font-size: 3rem;
   background: url(https://media.giphy.com/media/10vL2Vlfw14JWg/giphy.gif) no-repeat center center;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   .header span {
     margin: 0 2%; }
     .header span.space {
@@ -27,7 +27,6 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    display: inline-block;
     vertical-align: top;
     float: left; }
     .content-container .side-bar li {
@@ -119,7 +118,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: radial-gradient(#333333, black);
   animation: showBlackScreen 200ms ease-in-out forwards; }
 @keyframes showBlackScreen {
   0% {
@@ -168,5 +167,24 @@ footer {
   height: 2rem;
   line-height: 2rem;
   color: white; }
+
+@media screen and (max-width: 920px) {
+  .nav-bar li {
+    padding: 0;
+    width: 32%; }
+
+  .content-container {
+    flex-direction: column; }
+    .content-container .side-bar {
+      display: block; }
+      .content-container .side-bar li {
+        width: 100%; }
+        .content-container .side-bar li.selected {
+          background: #252525; }
+    .content-container .image-container {
+      text-align: center;
+      padding: 0; }
+      .content-container .image-container .image-item {
+        width: 46%; } }
 
 /*# sourceMappingURL=style.css.map */
