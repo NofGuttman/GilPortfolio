@@ -134,14 +134,12 @@ body {
 }
 
 .nav-bar {
-  background: black;
+  background: #050505;
   padding: 0;
   margin: 0;
   
   li {
-    margin: 3px 0;
     display: inline-block;
-    border-radius: 3px;
     color: white;
     width: 200px;
     padding: 5px 40px;
@@ -150,8 +148,9 @@ body {
     transition: all 300ms ease-in-out;
     
     &.selected {
-      background: orangered;
-//      color: black;
+      background: black;
+      box-shadow: inset 0 -5px 0 0 #3d96ff;
+      color: #3d96ff;
     }
   }
 }
