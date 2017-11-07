@@ -2,6 +2,11 @@
   body {
     min-width: 0; }
 
+  .header {
+    font-size: 5vw;
+    height: 5em;
+    line-height: 5em; }
+
   .nav-bar li {
     padding: 10px 0;
     width: 32%;
@@ -17,13 +22,18 @@
         width: 100%;
         height: 2rem;
         line-height: 2rem; }
+        .content-container .side-bar li:hover {
+          font-size: 90%; }
         .content-container .side-bar li.selected {
-          background: #252525; }
+          background: #252525;
+          font-size: 90%; }
     .content-container .image-container {
       text-align: center;
       padding: 0; }
       .content-container .image-container .image-item {
-        width: 46%; }
+        width: 46vw;
+        height: 46vw;
+        margin: 1vw; }
 
   .black-screen .black-screen-image img {
     object-fit: contain;
@@ -38,11 +48,9 @@
     line-height: 1em;
     opacity: 0.3;
     background-color: black;
-    border: 1px solid black;
     font-size: 20vw;
     bottom: 0; }
     .black-screen .black-screen-arrow:hover {
-      transform: scale(1);
-      opacity: 0.6; } }
+      transform: scale(1); } }
 
 /*# sourceMappingURL=mobile-style.css.map */
