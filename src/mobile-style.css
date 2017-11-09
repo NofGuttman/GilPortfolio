@@ -34,6 +34,10 @@
         width: 46vw;
         height: 46vw;
         margin: 1vw; }
+      .content-container .image-container .no-images-selected {
+        font-size: 30vw;
+        height: 65vh;
+        line-height: 50vh; }
 
   .black-screen .black-screen-image img {
     object-fit: contain;

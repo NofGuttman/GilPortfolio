@@ -34,7 +34,7 @@ $(".category").click(function() {
         });
         
         $(".side-bar").html(categories);
-        $(".image-container").html("<div class='no-images-selected'>Select a Category</div>");
+        $(".image-container").html("<div class='no-images-selected'>( :</div>");
         
         loadElements($(".side-category"), 100);
       } 
@@ -131,7 +131,7 @@ $.ajax({
       return "<li id='" + cat.category + "' class='side-category'>" + cat.title + "</li>";
     });
     
-    $(".image-container").html("<div class='no-images-selected'>Select a Category</div>");
+    $(".image-container").html("<div class='no-images-selected'>( :</div>");
     $(".side-bar").html(categories);
     
     loadElements($(".side-category"), 100);

@@ -52,6 +52,12 @@
         height: 46vw;
         margin: 1vw;
       }
+      
+      .no-images-selected {
+        font-size: 30vw;
+        height: 65vh;
+        line-height: 50vh;
+      }
     }
   }
   
@@ -80,7 +86,6 @@
       
       &:hover {
         transform: scale(1);
-//        opacity: 0.6;
       }
     }
   }

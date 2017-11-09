@@ -57,6 +57,7 @@ body {
         outline: 1px solid grey;
         border: none; }
   .content-container .image-container {
+    margin: 0 auto;
     text-align: left;
     display: block;
     padding-left: 10px; }
@@ -95,7 +96,24 @@ body {
         top: 0;
         left: 0;
         transition: 250ms linear; }
-
+    .content-container .image-container .no-images-selected {
+      opacity: 0;
+      display: block;
+      color: white;
+      font-size: 13rem;
+      height: 50vh;
+      line-height: 50vh;
+      animation: showSmiley 400ms ease-in-out forwards 500ms; }
+@keyframes showSmiley {
+  0% {
+    opacity: 0;
+    transform: scale(0.2); }
+  85% {
+    opacity: 1;
+    transform: scale(1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 .nav-bar {
   background: black;
   padding: 0;
@@ -206,6 +224,10 @@ footer {
         width: 46vw;
         height: 46vw;
         margin: 1vw; }
+      .content-container .image-container .no-images-selected {
+        font-size: 30vw;
+        height: 65vh;
+        line-height: 50vh; }
 
   .black-screen .black-screen-image img {
     object-fit: contain;
