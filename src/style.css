@@ -103,7 +103,7 @@ body {
       font-size: 13rem;
       height: 50vh;
       line-height: 50vh;
-      animation: showSmiley 400ms ease-in-out forwards 500ms; }
+      animation: showSmiley 300ms ease-in-out forwards 500ms; }
 @keyframes showSmiley {
   0% {
     opacity: 0;
