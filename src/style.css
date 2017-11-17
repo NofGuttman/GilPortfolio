@@ -101,6 +101,12 @@ body {
         top: 0;
         left: 0;
         transition: 250ms linear; }
+    .content-container .image-container .no-images-selected {
+      opacity: 0;
+      display: block;
+      color: white;
+      font-size: 13rem;
+      animation: showSmiley 300ms ease-in-out forwards 500ms; }
 @keyframes showSmiley {
   0% {
     opacity: 0;
@@ -170,7 +176,6 @@ body {
     color: white;
     margin: 0 30px;
     cursor: pointer;
-    z-index: 1;
     transition: 150ms ease-in-out; }
     .black-screen .black-screen-arrow.left {
       left: 0; }
@@ -186,11 +191,16 @@ footer {
   background: black;
   height: 2rem;
   line-height: 2rem;
-  color: white; }
+  color: white;
+  z-index: -1; }
 
 @media screen and (max-width: 620px) {
+  html {
+    min-height: 100%; }
+
   body {
-    min-width: 0; }
+    min-width: 0;
+    min-height: 100%; }
 
   .header {
     font-size: 5vw;
@@ -204,7 +214,7 @@ footer {
 
   .content-container {
     flex-direction: column;
-    padding: 0; }
+    padding-bottom: 30px; }
     .content-container .side-bar {
       display: block; }
       .content-container .side-bar li {
@@ -225,9 +235,8 @@ footer {
         height: 46vw;
         margin: 1vw; }
       .content-container .image-container .no-images-selected {
-        font-size: 30vw;
-        height: 65vh;
-        line-height: 50vh; }
+        padding-top: 20px;
+        font-size: 30vw; }
 
   .black-screen .black-screen-image img {
     object-fit: contain;

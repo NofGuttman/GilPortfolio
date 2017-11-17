@@ -1,6 +1,10 @@
 @media screen and (max-width: 620px) {
+  html {
+    min-height: 100%; }
+
   body {
-    min-width: 0; }
+    min-width: 0;
+    min-height: 100%; }
 
   .header {
     font-size: 5vw;
@@ -14,7 +18,7 @@
 
   .content-container {
     flex-direction: column;
-    padding: 0; }
+    padding-bottom: 30px; }
     .content-container .side-bar {
       display: block; }
       .content-container .side-bar li {
@@ -35,9 +39,8 @@
         height: 46vw;
         margin: 1vw; }
       .content-container .image-container .no-images-selected {
-        font-size: 30vw;
-        height: 65vh;
-        line-height: 50vh; }
+        padding-top: 20px;
+        font-size: 30vw; }
 
   .black-screen .black-screen-image img {
     object-fit: contain;
