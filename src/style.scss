@@ -1,10 +1,16 @@
+html {
+  min-height: 100%;
+}
+
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
   min-width: 920px;
+  min-height: 100%;
   text-align: center;
-  background-color: #101010;
+  background-color: #121212;
 }
 
 .header {
@@ -30,7 +36,7 @@ body {
 
 .content-container {
   display: flex;
-  padding: 10px 0;
+  padding: 10px 0 40px 0;
   
   .side-bar {
     display: inline-block;
@@ -133,15 +139,15 @@ body {
       }
     }
     
-    .no-images-selected {
-      opacity: 0;
-      display: block;
-      color: white;
-      font-size: 13rem;
-      height: 50vh;
-      line-height: 50vh;
-      animation: showSmiley 300ms ease-in-out forwards 500ms;
-    }
+//    .no-images-selected {
+//      opacity: 0;
+//      display: block;
+//      color: white;
+//      font-size: 13rem;
+//      height: 50vh;
+//      line-height: 50vh;
+//      animation: showSmiley 300ms ease-in-out forwards 500ms;
+//    }
 
     @keyframes showSmiley {
       0% {
@@ -258,6 +264,9 @@ body {
 
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background: black;
   height: 2rem;
   line-height: 2rem;
